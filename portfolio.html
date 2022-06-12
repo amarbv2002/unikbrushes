@@ -1,0 +1,833 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Unikbrushes | Web Design That Feels Right!</title>
+    <!-- Required meta tags -->
+<meta charset="utf-8">
+    <meta name="description" content="Providing front end web development services since 2016 with 100% clients satisfaction">
+  <meta name="keywords" content="HTML, CSS, JavaScript, Bootstrap, Js, jQuery, Reactjs, Unikbrushes, logo, banners, headers, website, templates, theme, web design, graphic, graphic design, responsive, sites, websites, HTML5, CSS3,javascript es6">
+  <meta name="author" content="Amar karthik">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="/img/favicon.ico">
+
+    <!-- Main CSS integration -->
+    <link rel="stylesheet" href="stylesheet.css">
+
+    <!-- Bootstrap CSS v5.0.2 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+    <!-- Font awesome tool kit -->
+    <script src="https://kit.fontawesome.com/ebf15fd775.js" crossorigin="anonymous"></script>
+
+    <!-- Font link -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100;0,200;0,400;0,500;0,600;0,700;1,100;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+
+  </head>
+  <body>
+      
+<!--Dark mode starts-->
+      
+      <div class="dark-toogler">
+
+    <input type="checkbox" class="btn btn-check" name="darkSwitch" id="darkSwitch" value="1" onclick="yesno('darkSwitch','yesnos');" />
+    <label for="darkSwitch" class="btn bg-blue2" name="yesnos" id="yesnos">Turn on<br>dark mode ðŸŒ“</label>
+
+   </div>
+
+   <script>
+     function yesno(thecheckbox, thelabel) {
+    
+    var checkboxvar = document.getElementById(thecheckbox);
+    var labelvar = document.getElementById(thelabel);
+    if (!checkboxvar.checked) {
+        labelvar.innerHTML = "Turn on<br>dark mode ðŸŒ“";
+    }
+    else {
+        labelvar.innerHTML = "Turn off<br>dark mode ðŸŒ“";
+    }
+}
+
+    (function() {
+  var darkSwitch = document.getElementById("darkSwitch");
+  if (darkSwitch) {
+    initTheme();
+    darkSwitch.addEventListener("change", function(event) {
+      resetTheme();
+    });
+    function initTheme() {
+      var darkThemeSelected =
+        localStorage.getItem("darkSwitch") !== null &&
+        localStorage.getItem("darkSwitch") === "dark";
+      darkSwitch.checked = darkThemeSelected;
+      darkThemeSelected
+        ? document.body.setAttribute("data-theme", "dark")
+        : document.body.removeAttribute("data-theme");
+    }
+    function resetTheme() {
+      if (darkSwitch.checked) {
+        document.body.setAttribute("data-theme", "dark");
+        localStorage.setItem("darkSwitch", "dark");
+      } else {
+        document.body.removeAttribute("data-theme");
+        localStorage.removeItem("darkSwitch");
+      }
+    }
+  }
+})();
+
+</script>
+
+<!--Dark mode ends-->
+      
+    <nav class="navbar sticky-top navbar-expand-xl navbar-dark bg-black py-3">
+        <div class="container-fluid px-3">
+          <a href="/"><img style="width: 275px" class="img-fluid" src="img/logo.png"></a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse mybuttons" id="navbarSupportedContent">
+            <ul class="navbar-nav ms-auto">
+                
+              <li class="nav-item px-2 my-2">
+                <a class="nav-link btn text-white" aria-current="page" href="/"><i class="fa-solid fa-house"></i> Home</a>
+              </li>
+
+              <li class="nav-item px-2 my-2">
+                <a class="nav-link btn text-white" aria-current="page" href="https://www.unikbrushes.com#services"><i class="fa-solid fa-computer"></i> Services</a>
+              </li>
+                
+                <li class="nav-item px-2 my-2">
+                <a class="nav-link btn text-white" aria-current="page" href="https://www.unikbrushes.com#about"><i class="fa-solid fa-user"></i> About</a>
+              </li>
+              
+              <li class="nav-item px-2 my-2">
+                <a class="nav-link btn text-white" aria-current="page" href="https://www.unikbrushes.com#pricing"><i class="fa-solid fa-tags"></i> Pricing</a>
+              </li>
+
+              <li class="nav-item px-2 my-2">
+                <a class="nav-link btn text-white" aria-current="page" href="https://www.unikbrushes.com#tests"><i class="fa-solid fa-star"></i> Testimonials</a>
+              </li>
+                
+
+              <li class="nav-item px-2 my-2">
+                <a class="nav-link btn text-white" aria-current="page" href="https://www.unikbrushes.com#portfolio"><i class="fa-solid fa-photo-film"></i> Portfolio</a>
+              </li>              
+                
+                <li class="nav-item px-2 my-2">
+                <a class="nav-link btn text-white" aria-current="page" href="https://www.unikbrushes.com#contact"><i class="fa-solid fa-message"></i> Get a quote</a>
+              </li>
+      
+            </ul>
+          </div>
+        </div>
+      </nav>
+
+      <div class="container-fluid portfolio" id="portfolio">
+        <div class="container text-center">
+          <h1>My complete portfolio</h1>
+          <center><hr align="center" width="50%" style="color: black;" size=5px></center>
+          
+ <!--         <style>
+              .quick a {
+                  border-radius: 6px;
+                  margin:10px 10px 0px 0px;
+                  transition: 0.4s;
+                  font-size: 1.25em;
+                  border: 2px solid #0b0c10;
+                  color: #0b0c10 !important;
+              }
+              .quick a:hover {
+                  background:#0b0c10 !important;
+                  color: white !important;
+              }
+          </style>
+          <center>
+              <div class="quick">
+              <h2>Quick links</h2>
+          <ul class="nav justify-content-center">
+  <li class="nav-item">
+    <a class="nav-link" href="#rsd">Responsive Themes</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="#wt">Web Templates</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="#logos">Logo Designs</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="#four">468x60px banners</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="#seven">728x90px banners</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="#one">125x125px banners</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="#head">Headers</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="#splash">Splash pages</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="#busi">Business cards</a>
+  </li>
+</ul>
+</div>
+         </center>
+         -->
+         
+         
+          <div id="rsd">
+          
+          <h2 class="pt-5">Responsive themes</h2>
+          <div class="row">
+              <div class="col-md-4 my-3">
+            <div class="card">
+              <div class="zoom">
+              <a target="_blank" href="https://www.unikbrushes.com/img/portfolio/29.jpg"><img src="https://www.unikbrushes.com/img/portfolio/rsd4.jpg" class="card-img-top img-fluid" alt="1stimage"></a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-4 my-3">
+            <div class="card">
+              <div class="zoom">
+              <a target="_blank" href="https://www.unikbrushes.com/img/portfolio/27.jpg"><img src="https://www.unikbrushes.com/img/portfolio/rsd3-1.jpg" class="card-img-top img-fluid" alt="1stimage"></a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-4 my-3">
+            <div class="card">
+              <div class="zoom">
+              <a target="_blank" href="https://www.unikbrushes.com/img/portfolio/28.jpg"><img src="https://www.unikbrushes.com/img/portfolio/rsd3-2.jpg" class="card-img-top img-fluid" alt="1stimage"></a>
+              </div>
+            </div>
+          </div>
+          
+          <div class="col-md-4 my-3">
+            <div class="card">
+              <div class="zoom">
+              <a target="_blank" href="https://www.unikbrushes.com/img/portfolio/2.jpg"><img src="https://www.unikbrushes.com/img/portfolio/rsd2.jpg" class="card-img-top img-fluid" alt="1stimage"></a>
+              </div>
+            </div>
+          </div>
+          
+          
+          </div>
+          </div>
+            
+          
+          <center><hr align="center" width="90%" style="color: black;" size=5px></center>
+          
+          
+          <div id="wt">
+          
+          <h2 class="pt-5">Web Templates</h2>
+          <div class="row">
+              
+              <div class="col-md-4 my-3">
+            <div class="card">
+              <div class="zoom">
+              <a target="_blank" href="https://www.unikbrushes.com/img/portfolio/29.jpg"><img src="https://www.unikbrushes.com/img/portfolio/2929.jpg" class="card-img-top img-fluid" alt="1stimage"></a>
+              </div>
+            </div>
+          </div>
+              
+              <div class="col-md-4 my-3">
+            <div class="card">
+              <div class="zoom">
+              <a target="_blank" href="https://www.unikbrushes.com/img/portfolio/28.jpg"><img src="https://www.unikbrushes.com/img/portfolio/2727.jpg" class="card-img-top img-fluid" alt="1stimage"></a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-4 my-3">
+            <div class="card">
+              <div class="zoom">
+              <a target="_blank" href="https://www.unikbrushes.com/img/portfolio/28.jpg"><img src="https://www.unikbrushes.com/img/portfolio/2828.jpg" class="card-img-top img-fluid" alt="1stimage"></a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-4 my-3">
+            <div class="card">
+              <div class="zoom">
+              <a target="_blank" href="https://www.unikbrushes.com/img/portfolio/12.jpg"><img src="https://www.unikbrushes.com/img/portfolio/1212.jpg" class="card-img-top img-fluid" alt="1stimage"></a>
+              </div>
+            </div>
+          </div>
+  
+            <div class="col-md-4 my-3">
+              <div class="card">
+                <div class="zoom">
+                <a href="img/portfolio/1.jpg"><img src="img/portfolio/11.jpg" class="card-img-top img-fluid" alt="1stimage"></a>
+                </div>
+              </div>
+            </div>
+  
+            <div class="col-md-4 my-3">
+              <div class="card">
+                <div class="zoom">
+                <a href="img/portfolio/2.jpg"><img src="img/portfolio/22.jpg" class="card-img-top img-fluid" alt="1stimage"></a>
+                </div>
+              </div>
+            </div>
+  
+            <div class="col-md-4 my-3">
+              <div class="card">
+                <div class="zoom">
+                <a href="img/portfolio/3.jpg"><img src="img/portfolio/33.jpg" class="card-img-top img-fluid" alt="1stimage"></a>
+                </div>
+              </div>
+            </div>
+  
+            <div class="col-md-4 my-3">
+              <div class="card">
+                <div class="zoom">
+                <a href="img/portfolio/4.jpg"><img src="img/portfolio/44.jpg" class="card-img-top img-fluid" alt="1stimage"></a>
+                </div>
+              </div>
+            </div>
+  
+            <div class="col-md-4 my-3">
+              <div class="card">
+                <div class="zoom">
+                <a href="img/portfolio/5.jpg"><img src="img/portfolio/55.jpg" class="card-img-top img-fluid" alt="1stimage"></a>
+                </div>
+              </div>
+            </div>
+  
+            <div class="col-md-4 my-3">
+              <div class="card">
+                <div class="zoom">
+                <a href="img/portfolio/6.jpg"><img src="img/portfolio/66.jpg" class="card-img-top img-fluid" alt="1stimage"></a>
+                </div>
+              </div>
+            </div>
+  
+            <div class="col-md-4 my-3">
+              <div class="card">
+                <div class="zoom">
+                <a href="img/portfolio/7.jpg"><img src="img/portfolio/77.jpg" class="card-img-top img-fluid" alt="1stimage"></a>
+                </div>
+              </div>
+            </div>
+  
+            <div class="col-md-4 my-3">
+              <div class="card">
+                <div class="zoom">
+                <a href="img/portfolio/8.jpg"><img src="img/portfolio/88.jpg" class="card-img-top img-fluid" alt="1stimage"></a>
+                </div>
+              </div>
+            </div>
+  
+            <div class="col-md-4 my-3">
+              <div class="card">
+                <div class="zoom">
+                <a href="img/portfolio/9.jpg"><img src="img/portfolio/99.jpg" class="card-img-top img-fluid" alt="1stimage"></a>
+                </div>
+              </div>
+            </div>
+
+
+
+            <div class="col-md-4 my-3">
+              <div class="card">
+                <div class="zoom">
+                <a href="img/portfolio/10.jpg"><img src="img/portfolio/1010.jpg" class="card-img-top img-fluid" alt="1stimage"></a>
+                </div>
+              </div>
+            </div>
+  
+            <div class="col-md-4 my-3">
+              <div class="card">
+                <div class="zoom">
+                <a href="img/portfolio/12.jpg"><img src="img/portfolio/1212.jpg" class="card-img-top img-fluid" alt="1stimage"></a>
+                </div>
+              </div>
+            </div>
+  
+            <div class="col-md-4 my-3">
+              <div class="card">
+                <div class="zoom">
+                <a href="img/portfolio/13.jpg"><img src="img/portfolio/1313.jpg" class="card-img-top img-fluid" alt="1stimage"></a>
+                </div>
+              </div>
+            </div>
+  
+            <div class="col-md-4 my-3">
+              <div class="card">
+                <div class="zoom">
+                <a href="img/portfolio/14.jpg"><img src="img/portfolio/1414.jpg" class="card-img-top img-fluid" alt="1stimage"></a>
+                </div>
+              </div>
+            </div>
+  
+            <div class="col-md-4 my-3">
+              <div class="card">
+                <div class="zoom">
+                <a href="img/portfolio/15.jpg"><img src="img/portfolio/1515.jpg" class="card-img-top img-fluid" alt="1stimage"></a>
+                </div>
+              </div>
+            </div>
+  
+            <div class="col-md-4 my-3">
+              <div class="card">
+                <div class="zoom">
+                <a href="img/portfolio/16.jpg"><img src="img/portfolio/1616.jpg" class="card-img-top img-fluid" alt="1stimage"></a>
+                </div>
+              </div>
+            </div>
+  
+            <div class="col-md-4 my-3">
+              <div class="card">
+                <div class="zoom">
+                <a href="img/portfolio/17.jpg"><img src="img/portfolio/1717.jpg" class="card-img-top img-fluid" alt="1stimage"></a>
+                </div>
+              </div>
+            </div>
+  
+            <div class="col-md-4 my-3">
+              <div class="card">
+                <div class="zoom">
+                <a href="img/portfolio/18.jpg"><img src="img/portfolio/1818.jpg" class="card-img-top img-fluid" alt="1stimage"></a>
+                </div>
+              </div>
+            </div>
+  
+            <div class="col-md-4 my-3">
+              <div class="card">
+                <div class="zoom">
+                <a href="img/portfolio/19.jpg"><img src="img/portfolio/1919.jpg" class="card-img-top img-fluid" alt="1stimage"></a>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-4 my-3">
+              <div class="card">
+                <div class="zoom">
+                <a href="img/portfolio/20.jpg"><img src="img/portfolio/2020.jpg" class="card-img-top img-fluid" alt="1stimage"></a>
+                </div>
+              </div>
+            </div>
+  
+            <div class="col-md-4 my-3">
+              <div class="card">
+                <div class="zoom">
+                <a href="img/portfolio/21.jpg"><img src="img/portfolio/2121.jpg" class="card-img-top img-fluid" alt="1stimage"></a>
+                </div>
+              </div>
+            </div>
+  
+            <div class="col-md-4 my-3">
+              <div class="card">
+                <div class="zoom">
+                <a href="img/portfolio/23.jpg"><img src="img/portfolio/2323.jpg" class="card-img-top img-fluid" alt="1stimage"></a>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-4 my-3">
+              <div class="card">
+                <div class="zoom">
+                <a href="img/portfolio/24.jpg"><img src="img/portfolio/2424.jpg" class="card-img-top img-fluid" alt="1stimage"></a>
+                </div>
+              </div>
+            </div>
+  
+            <div class="col-md-4 my-3">
+              <div class="card">
+                <div class="zoom">
+                <a href="img/portfolio/25.jpg"><img src="img/portfolio/2525.jpg" class="card-img-top img-fluid" alt="1stimage"></a>
+                </div>
+              </div>
+            </div>
+  
+            <div class="col-md-4 my-3">
+              <div class="card">
+                <div class="zoom">
+                <a href="img/portfolio/26.jpg"><img src="img/portfolio/2626.jpg" class="card-img-top img-fluid" alt="1stimage"></a>
+                </div>
+              </div>
+            </div>
+            </div>
+          </div>
+
+          <center><hr align="center" width="90%" style="color: black;" size=5px></center>
+          
+          <div id="logos">
+
+          <h2 class="pt-5">Logos</h2>
+
+          <img src="img/portfolio/logos.png" class="img-fluid" alt="logos">
+          
+          </div>
+
+          <center><hr align="center" width="90%" style="color: black;" size=5px></center>
+          
+          
+
+            <h2 class="py-5">Animated and static Banners</h2>
+            
+            
+            <div id="four">
+
+            <h4 class="mt-5">468x60px banners</h4>
+            <img src="img/portfolio/468/alientastic1.gif" class="img-fluid mt-2" alt="banners">
+            <img src="img/portfolio/468/2.gif" class="img-fluid mt-2" alt="banners">
+            <img src="img/portfolio/468/3.gif" class="img-fluid mt-2" alt="banners">
+            <img src="img/portfolio/468/4.gif" class="img-fluid mt-2" alt="banners">
+            <img src="img/portfolio/468/5.gif" class="img-fluid mt-2" alt="banners">
+            <img src="img/portfolio/468/6.gif" class="img-fluid mt-2" alt="banners">
+            <img src="img/portfolio/468/7.gif" class="img-fluid mt-2" alt="banners">
+            <img src="img/portfolio/468/8.gif" class="img-fluid mt-2" alt="banners">
+            <img src="img/portfolio/468/9.gif" class="img-fluid mt-2" alt="banners">
+            <img src="img/portfolio/468/10.gif" class="img-fluid mt-2" alt="banners">
+            <img src="img/portfolio/468/12.gif" class="img-fluid mt-2" alt="banners">
+            <img src="img/portfolio/468/13.gif" class="img-fluid mt-2" alt="banners">
+            <img src="img/portfolio/468/14.gif" class="img-fluid mt-2" alt="banners">
+            <img src="img/portfolio/468/15.gif" class="img-fluid mt-2" alt="banners">
+            <img src="img/portfolio/468/16.png" class="img-fluid mt-2" alt="banners">
+            <img src="img/portfolio/468/17.gif" class="img-fluid mt-2" alt="banners">
+            <img src="img/portfolio/468/18.gif" class="img-fluid mt-2" alt="banners">
+            <img src="img/portfolio/468/19.gif" class="img-fluid mt-2" alt="banners">
+            <img src="img/portfolio/468/20.gif" class="img-fluid mt-2" alt="banners">
+            <img src="img/portfolio/468/21.gif" class="img-fluid mt-2" alt="banners">
+            <img src="img/portfolio/468/22.gif" class="img-fluid mt-2" alt="banners">
+            <img src="img/portfolio/468/23.gif" class="img-fluid mt-2" alt="banners">
+            <img src="img/portfolio/468/24.gif" class="img-fluid mt-2" alt="banners">
+            <img src="img/portfolio/468/25.gif" class="img-fluid mt-2" alt="banners">
+            <img src="img/portfolio/468/26.gif" class="img-fluid mt-2" alt="banners">
+            <img src="img/portfolio/468/27.gif" class="img-fluid mt-2" alt="banners">
+            <img src="img/portfolio/468/28.gif" class="img-fluid mt-2" alt="banners">
+            <img src="img/portfolio/468/29.gif" class="img-fluid mt-2" alt="banners">
+            <img src="img/portfolio/468/30.gif" class="img-fluid mt-2" alt="banners">
+            <img src="img/portfolio/468/31.gif" class="img-fluid mt-2" alt="banners">
+            <img src="img/portfolio/468/32.gif" class="img-fluid mt-2" alt="banners">
+            <img src="img/portfolio/468/33.gif" class="img-fluid mt-2" alt="banners">
+            <img src="img/portfolio/468/34.gif" class="img-fluid mt-2" alt="banners">
+            <img src="img/portfolio/468/35.gif" class="img-fluid mt-2" alt="banners">
+            <img src="img/portfolio/468/36.gif" class="img-fluid mt-2" alt="banners">
+            <img src="img/portfolio/468/37.gif" class="img-fluid mt-2" alt="banners">
+            <img src="img/portfolio/468/38.gif" class="img-fluid mt-2" alt="banners">
+            <img src="img/portfolio/468/39.gif" class="img-fluid mt-2" alt="banners">
+            <img src="img/portfolio/468/40.gif" class="img-fluid mt-2" alt="banners">
+            <img src="img/portfolio/468/41.gif" class="img-fluid mt-2" alt="banners">
+            <img src="img/portfolio/468/42.png" class="img-fluid mt-2" alt="banners">
+            <img src="img/portfolio/468/43.gif" class="img-fluid mt-2" alt="banners">
+            <img src="img/portfolio/468/44.gif" class="img-fluid mt-2" alt="banners">
+            <img src="img/portfolio/468/45.gif" class="img-fluid mt-2" alt="banners">
+            <img src="img/portfolio/468/46.gif" class="img-fluid mt-2" alt="banners">
+            <img src="img/portfolio/468/47.gif" class="img-fluid mt-2" alt="banners">
+            <img src="img/portfolio/468/48.gif" class="img-fluid mt-2" alt="banners">
+            <img src="img/portfolio/468/49.gif" class="img-fluid mt-2" alt="banners">
+            <img src="img/portfolio/468/50.png" class="img-fluid mt-2" alt="banners">
+            <img src="img/portfolio/468/51.gif" class="img-fluid mt-2" alt="banners">
+            <img src="img/portfolio/468/52.gif" class="img-fluid mt-2" alt="banners">
+            <img src="img/portfolio/468/53.gif" class="img-fluid mt-2" alt="banners">
+            <img src="img/portfolio/468/54.gif" class="img-fluid mt-2" alt="banners">
+            <img src="img/portfolio/468/55.gif" class="img-fluid mt-2" alt="banners">
+            <img src="img/portfolio/468/56.gif" class="img-fluid mt-2" alt="banners">
+            <img src="img/portfolio/468/57.gif" class="img-fluid mt-2" alt="banners">
+            <img src="img/portfolio/468/58.gif" class="img-fluid mt-2" alt="banners">
+            <img src="img/portfolio/468/59.gif" class="img-fluid mt-2" alt="banners">
+            <img src="img/portfolio/468/60.gif" class="img-fluid mt-2" alt="banners">
+            
+            </div>
+            
+            <div id="seven">
+
+            <h4 class="pt-5">728x90px banners</h4>
+            <img src="img/portfolio/728/alientastic2.gif" class="img-fluid mt-2" alt="banners">
+            <img src="img/portfolio/728/1.gif" class="img-fluid mt-2" alt="banners">
+            <img src="img/portfolio/728/2.gif" class="img-fluid mt-2" alt="banners">
+            <img src="img/portfolio/728/3.gif" class="img-fluid mt-2" alt="banners">
+            <img src="img/portfolio/728/4.gif" class="img-fluid mt-2" alt="banners">
+            <img src="img/portfolio/728/5.gif" class="img-fluid mt-2" alt="banners">
+            <img src="img/portfolio/728/6.gif" class="img-fluid mt-2" alt="banners">
+            <img src="img/portfolio/728/7.gif" class="img-fluid mt-2" alt="banners">
+            <img src="img/portfolio/728/8.gif" class="img-fluid mt-2" alt="banners">
+            <img src="img/portfolio/728/9.gif" class="img-fluid mt-2" alt="banners">
+            <img src="img/portfolio/728/10.gif" class="img-fluid mt-2" alt="banners">
+            <img src="img/portfolio/728/11.gif" class="img-fluid mt-2" alt="banners">
+            <img src="img/portfolio/728/12.gif" class="img-fluid mt-2" alt="banners">
+            <img src="img/portfolio/728/13.gif" class="img-fluid mt-2" alt="banners">
+            <img src="img/portfolio/728/14.gif" class="img-fluid mt-2" alt="banners">
+            <img src="img/portfolio/728/15.gif" class="img-fluid mt-2" alt="banners">
+            <img src="img/portfolio/728/17.gif" class="img-fluid mt-2" alt="banners">
+            <img src="img/portfolio/728/18.gif" class="img-fluid mt-2" alt="banners">
+            <img src="img/portfolio/728/19.gif" class="img-fluid mt-2" alt="banners">
+            <img src="img/portfolio/728/20.gif" class="img-fluid mt-2" alt="banners">
+            <img src="img/portfolio/728/21.gif" class="img-fluid mt-2" alt="banners">
+            <img src="img/portfolio/728/22.gif" class="img-fluid mt-2" alt="banners">
+            <img src="img/portfolio/728/23.gif" class="img-fluid mt-2" alt="banners">
+            <img src="img/portfolio/728/24.gif" class="img-fluid mt-2" alt="banners">
+            <img src="img/portfolio/728/25.gif" class="img-fluid mt-2" alt="banners">
+            <img src="img/portfolio/728/26.gif" class="img-fluid mt-2" alt="banners">
+            
+            </div>
+
+            <div id="one">
+            <h4 class="pt-5">125x125px banners</h4>
+            <img src="img/portfolio/125/alientastic4.gif" class="img-fluid mt-2" alt="banners">
+            <img src="img/portfolio/125/1.gif" class="img-fluid mt-2" alt="banners">
+            <img src="img/portfolio/125/2.gif" class="img-fluid mt-2" alt="banners">
+            <img src="img/portfolio/125/3.gif" class="img-fluid mt-2" alt="banners">
+            <img src="img/portfolio/125/4.gif" class="img-fluid mt-2" alt="banners">
+            <img src="img/portfolio/125/5.gif" class="img-fluid mt-2" alt="banners">
+            <img src="img/portfolio/125/6.png" class="img-fluid mt-2" alt="banners">
+            <img src="img/portfolio/125/7.gif" class="img-fluid mt-2" alt="banners">
+            <img src="img/portfolio/125/8.gif" class="img-fluid mt-2" alt="banners">
+            <img src="img/portfolio/125/9.gif" class="img-fluid mt-2" alt="banners">
+            <img src="img/portfolio/125/10.gif" class="img-fluid mt-2" alt="banners">
+            <img src="img/portfolio/125/11.gif" class="img-fluid mt-2" alt="banners">
+            <img src="img/portfolio/125/12.gif" class="img-fluid mt-2" alt="banners">
+            <img src="img/portfolio/125/13.gif" class="img-fluid mt-2" alt="banners">
+            <img src="img/portfolio/125/14.gif" class="img-fluid mt-2" alt="banners">
+            <img src="img/portfolio/125/15.gif" class="img-fluid mt-2" alt="banners">
+            <img src="img/portfolio/125/16.gif" class="img-fluid mt-2" alt="banners">
+            <img src="img/portfolio/125/18.gif" class="img-fluid mt-2" alt="banners">
+            <img src="img/portfolio/125/19.gif" class="img-fluid mt-2" alt="banners">
+            <img src="img/portfolio/125/20.gif" class="img-fluid mt-2" alt="banners">
+            <img src="img/portfolio/125/21.gif" class="img-fluid mt-2" alt="banners">
+            <img src="img/portfolio/125/22.gif" class="img-fluid mt-2" alt="banners">
+            <img src="img/portfolio/125/23.gif" class="img-fluid mt-2" alt="banners">
+            <img src="img/portfolio/125/24.gif" class="img-fluid mt-2" alt="banners">
+            <img src="img/portfolio/125/25.gif" class="img-fluid mt-2" alt="banners">
+            <img src="img/portfolio/125/26.gif" class="img-fluid mt-2" alt="banners">
+            <img src="img/portfolio/125/27.gif" class="img-fluid mt-2" alt="banners">
+            <img src="img/portfolio/125/28.gif" class="img-fluid mt-2" alt="banners">
+            <img src="img/portfolio/125/29.gif" class="img-fluid mt-2" alt="banners">
+            <img src="img/portfolio/125/30.gif" class="img-fluid mt-2" alt="banners">
+            <img src="img/portfolio/125/31.gif" class="img-fluid mt-2" alt="banners">
+            <img src="img/portfolio/125/32.gif" class="img-fluid mt-2" alt="banners">
+            <img src="img/portfolio/125/33.gif" class="img-fluid mt-2" alt="banners">
+            <img src="img/portfolio/125/34.gif" class="img-fluid mt-2" alt="banners">    
+            
+            </div>
+            
+            <center><hr align="center" width="90%" style="color: black;" size=5px></center>
+            
+            <div id="head">
+
+            <h2 class="py-5">Headers</h2>
+            <img src="img/portfolio/headers/alientastic_FB_cover2.png" class="img-fluid mt-2" alt="banners">
+            <img src="img/portfolio/headers/1.png" class="img-fluid mt-2" alt="banners">
+            <img src="img/portfolio/headers/2.png" class="img-fluid mt-2" alt="banners">
+            <img src="img/portfolio/headers/6.gif" class="img-fluid mt-2" alt="banners">
+            <img src="img/portfolio/headers/4.jpg" class="img-fluid mt-2" alt="banners">
+            <img src="img/portfolio/headers/5.jpg" class="img-fluid mt-2" alt="banners">
+            <img src="img/portfolio/headers/3.jpg" class="img-fluid mt-2" alt="banners">
+            
+            </div>
+
+            <center><hr align="center" width="90%" style="color: black;" size=5px></center>
+            
+            <div id="splash">
+
+            <h2 class="py-5">Splash pages</h2>
+            <img src="img/portfolio/splash/1.gif" class="img-fluid mt-2" alt="banners">
+            <img src="img/portfolio/splash/2.gif" class="img-fluid mt-2" alt="banners">
+            <img src="img/portfolio/splash/3.png" class="img-fluid mt-2" alt="banners">
+            
+            <img src="img/portfolio/splash/5.jpg" class="img-fluid mt-2" alt="banners">
+            <img src="img/portfolio/splash/4.png" class="img-fluid mt-2" alt="banners">
+            <img src="img/portfolio/splash/6.jpg" class="img-fluid mt-2" alt="banners">
+            <img src="img/portfolio/splash/7.jpg" class="img-fluid mt-2" alt="banners">
+            <img src="img/portfolio/splash/8.jpg" class="img-fluid mt-2" alt="banners">
+            <img src="img/portfolio/splash/9.jpg" class="img-fluid mt-2" alt="banners">
+            <img src="img/portfolio/splash/10.gif" class="img-fluid mt-2" alt="banners">
+            <img src="img/portfolio/splash/11.gif" class="img-fluid mt-2" alt="banners">
+            <img src="img/portfolio/splash/12.gif" class="img-fluid mt-2" alt="banners">
+            <img src="img/portfolio/splash/13.gif" class="img-fluid mt-2" alt="banners">
+            <img src="img/portfolio/splash/14.gif" class="img-fluid mt-2" alt="banners">
+            <img src="img/portfolio/splash/15.gif" class="img-fluid mt-2" alt="banners">
+            <img src="img/portfolio/splash/16.gif" class="img-fluid mt-2" alt="banners">
+            <img src="img/portfolio/splash/18.gif" class="img-fluid mt-2" alt="banners">
+            <img src="img/portfolio/splash/19.gif" class="img-fluid mt-2" alt="banners">
+            <img src="img/portfolio/splash/20.gif" class="img-fluid mt-2" alt="banners">
+            <img src="img/portfolio/splash/21.gif" class="img-fluid mt-2" alt="banners">
+            <img src="img/portfolio/splash/22.gif" class="img-fluid mt-2" alt="banners">
+            <img src="img/portfolio/splash/23.gif" class="img-fluid mt-2" alt="banners">
+            <img src="img/portfolio/splash/24.gif" class="img-fluid mt-2" alt="banners">
+            <img src="img/portfolio/splash/25.gif" class="img-fluid mt-2" alt="banners">
+            <img src="img/portfolio/splash/26.gif" class="img-fluid mt-2" alt="banners">
+            <img src="img/portfolio/splash/27.gif" class="img-fluid mt-2" alt="banners">
+            <img src="img/portfolio/splash/28.gif" class="img-fluid mt-2" alt="banners">
+            <img src="img/portfolio/splash/29.gif" class="img-fluid mt-2" alt="banners">
+                </div>
+                
+                <center><hr align="center" width="90%" style="color: black;" size=5px></center>
+                
+                <div id="busi">
+
+<h2 class="py-5">Business Cards</h2>
+            <img src="img/portfolio/bus/1.png" class="img-fluid mt-2" alt="banners">
+            <img src="img/portfolio/bus/2.png" class="img-fluid mt-2" alt="banners">
+            
+</div>
+        </div>
+      </div>
+
+
+    <div class="container-fluid contact" id="contact">
+      <div class="container">
+        <h1 class="text-center">Get a Quote</h1>
+        <center><hr align="center" width="50%" style="color: black;" size=5px></center>
+        <p class="text-center">Want to get a quote for your design? Feel free to contact me by filling out the below form and submitting it.</p>
+
+  <div class="row">
+
+      <div class="col-md-12 mb-md-0">
+
+          <form id="contact-form" method="post" action="contact.php" role="form">
+
+    <div class="messages"></div>
+
+    <div class="controls">
+
+        <div class="row">
+            <div class="col-md-6">
+                <div class="form-group mt-3">
+                    <label for="form_name">Firstname *</label>
+                    <input id="form_name" type="text" name="name" class="form-control" placeholder="Please enter your firstname *" required="required" data-error="Firstname is required.">
+                    <div class="help-block with-errors"></div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="form-group mt-3">
+                    <label for="form_lastname">Lastname *</label>
+                    <input id="form_lastname" type="text" name="surname" class="form-control" placeholder="Please enter your lastname *" required="required" data-error="Lastname is required.">
+                    <div class="help-block with-errors"></div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6">
+                <div class="form-group mt-3">
+                    <label for="form_email">Email *</label>
+                    <input id="form_email" type="email" name="email" class="form-control" placeholder="Please enter your email *" required="required" data-error="Valid email is required.">
+                    <div class="help-block with-errors"></div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                  <div class="form-group mt-3">
+                    <label for="form_email">Budget</label>
+                    <input id="form_budget" type="budget" name="budget" class="form-control" placeholder="Please write your budget">
+                    <div class="help-block with-errors"></div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <div class="form-group mt-3">
+                    <label for="form_message">Message *</label>
+                    <textarea id="form_message" name="message" class="form-control" placeholder="Message for me *" rows="4" required="required" data-error="Please, leave us a message."></textarea>
+                    <div class="help-block with-errors"></div>
+                </div>
+            </div>
+            <div class="col-md-12">
+                <center><input type="submit" class="btn btn-success btn-send mt-3" value="Send message"></center>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <p class="text-muted mt-3 text-center">
+                    <strong>*</strong> These fields are required.</p>
+            </div>
+        </div>
+    </div>
+
+</form>
+
+  </div>
+</div>
+      </div>
+    </div>
+    
+    <div style="padding: 0em 1em 4em 1em">
+        <center><img src="https://www.unikbrushes.com/banners/banner2.gif" class="img-fluid"></center>
+    </div>
+
+    <div class="container-fluid top-nav bg-orange">
+      <div class="container p-2">
+
+        <div class="row">
+
+          <div class="col-md-8 m-0 extrass text-center text-md-start">
+           <p class="py-2"><i class="fa-solid fa-envelope"></i> <a href="mailto:support@unikbrushes.com">support@unikbrushes.com</a> &nbsp; <i class="fa-solid fa-phone"></i> <a href="tel:+918762618517">+91 8762-618517</a></p>
+          </div>
+
+          <div class="col-md-4 m-0 text-center text-md-end">
+            <p>
+              <a href="https://wa.me/918762618517" target="_blank"><i class="fa-brands fa-whatsapp fa-2x"></i></a> &nbsp;
+              <a href="https://instagram.com/unikbrushes" target="_blank"><i class="fa-brands fa-instagram fa-2x"></i></a> &nbsp;
+              <a href="https://facebook.com/unikbrushes" target="_blank"><i class="fa-brands fa-facebook fa-2x"></i></a> &nbsp;
+              <a href="skype:live:bucksman5233?chat" target="_blank"><i class="fa-brands fa-skype fa-2x"></i></a>
+            </p>
+            
+          </div>
+
+        </div>
+          
+      </div>
+  </div>
+
+    <div class="container-fluid bg-black footer" id="footer">
+      <div class="container">
+
+        <div class="row text-white text-center">
+
+          <div class="col-md-4 left-footer p-3">
+            <h4 class="text-blue">About me</h4>
+            <img src="img/me.jpg" class="img-fluid pb-3" style="border-radius: 50%;">
+            <p>I'm Amar, a Front-end web developer having 6+ years of experience into designing websites using HTML, CSS, JavaScript, Bootstrap, jQuery.<a target="_blank" href="https://www.learnmall.in/cert/FDE448338B"> Click here to view my certification.</a></p>
+            <p><a target="_blank" href="https://www.instagram.com/unikbrushes/"><i class="fa-brands fa-instagram fa-2x me-1"></i></a> <a target="_blank" href="skype:live:bucksman5233?chat"><i class="fa-brands fa-skype fa-2x me-1"></i></a> <a target="_blank" href="https://www.facebook.com/amar.karthik.794/"><i class="fa-brands fa-facebook fa-2x me-1"></i></a> <a target="_blank" href="https://www.linkedin.com/in/amar-karthik-rocky"><i class="fa-brands fa-linkedin fa-2x me-1"></i></a></p>
+          </div>
+
+          <div class="col-md-2 center-footer">
+
+          </div>
+
+          <div class="col-md-6 right-footer p-3">
+            <h4 class="text-blue">Refund Policy</h4>
+            <p>We don't offer refunds to clients when all of our work is completed. But we will show mockups before the final order delivery and If the client is not satisfied with that design, then we will offer the refund according to the completion of order.</p>
+
+            <h4 class="text-blue mt-4">Payment Processors</h4>
+            <p>I accept payments from PayPal(with fees), Payeer, PerfectMoney, Bitcoin, Ethereum, Litecoin, Dogecoin, Bank Transfer(Only for Indians) and UPI payments(Only for Indians).</p>
+          </div>
+
+        </div>
+
+        <center><hr align="center" style="color: white;" size=5px></center>
+
+        <p class="text-center">Copyright Â© 2022 <a href="https://www.unikbrushes.com">Unikbrushes.com</a> All rights reserved.</p>
+
+      </div>
+    </div>
+
+    <button
+    type="button"
+    class="btn bg-orange btn-floating btn-lg"
+    id="btn-back-to-top"
+    >
+<i class="fas fa-arrow-up"></i>
+</button>
+
+
+
+    <!-- Bootstrap JavaScript Libraries -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+
+        <!--Custom scripts-->
+    <script src="script.js"> </script>
+    <script src="contact.js"> </script>
+  </body>
+</html>
