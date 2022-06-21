@@ -1,763 +1,824 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <title>Unikbrushes | Web Design That Feels Right!</title>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="description" content="Providing front end web development services since 2016 with 100% clients satisfaction">
-  <meta name="keywords" content="HTML, CSS, JavaScript, Bootstrap, Js, jQuery, Reactjs, Unikbrushes, logo, banners, headers, website, templates, theme, web design, graphic, graphic design, responsive, sites, websites, HTML5, CSS3,javascript es6">
+
+<head>
+  <title>Unikbrushes | Web Design That Feels Right!</title>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="description"
+    content="Providing front end web development services since 2016 with 100% clients satisfaction">
+  <meta name="keywords"
+    content="HTML, CSS, JavaScript, Bootstrap, Js, jQuery, Reactjs, Unikbrushes, logo, banners, headers, website, templates, theme, web design, graphic, graphic design, responsive, sites, websites, HTML5, CSS3,javascript es6">
   <meta name="author" content="Amar karthik">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    
-    <!--Animate on scroll-->
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <!-- Favicon -->
-    <link rel="icon" type="image/x-icon" href="/img/favicon.ico">
+  <!--Animate on scroll-->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
-    <!-- Main CSS integration -->
-    <link rel="stylesheet" href="stylesheet.css">
+  <!-- Favicon -->
+  <link rel="icon" type="image/x-icon" href="/img/favicon.ico">
 
-    <!-- Bootstrap CSS v5.0.2 -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+  <!-- Main CSS integration -->
+  <link rel="stylesheet" href="stylesheet.css">
 
-    <!-- Font awesome tool kit -->
-    <script src="https://kit.fontawesome.com/ebf15fd775.js" crossorigin="anonymous"></script>
+  <!-- Bootstrap CSS v5.0.2 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 
-    <!-- Font link -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100;0,200;0,400;0,500;0,600;0,700;1,100;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+  <!-- Font awesome tool kit -->
+  <script src="https://kit.fontawesome.com/ebf15fd775.js" crossorigin="anonymous"></script>
 
-  </head>
-  <body>
+  <!-- Font link -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100;0,200;0,400;0,500;0,600;0,700;1,100;1,400;1,500;1,600;1,700&display=swap"
+    rel="stylesheet">
 
-<!--Dark mode starts-->
+</head>
 
-   <div class="dark-toogler">
+<body>
 
-    <input type="checkbox" class="btn btn-check" name="darkSwitch" id="darkSwitch" value="1" onclick="yesno('darkSwitch','yesnos');" />
+  <!--Dark mode starts-->
+
+  <div class="dark-toogler">
+
+    <input type="checkbox" class="btn btn-check" name="darkSwitch" id="darkSwitch" value="1"
+      onclick="yesno('darkSwitch','yesnos');" />
     <label for="darkSwitch" class="btn bg-blue" name="yesnos" id="yesnos">Turn on<br>dark mode ðŸŒ“</label>
 
-   </div>
+  </div>
 
-   <script>
-     function yesno(thecheckbox, thelabel) {
-    
-    var checkboxvar = document.getElementById(thecheckbox);
-    var labelvar = document.getElementById(thelabel);
-    if (!checkboxvar.checked) {
+  <script>
+    function yesno(thecheckbox, thelabel) {
+
+      var checkboxvar = document.getElementById(thecheckbox);
+      var labelvar = document.getElementById(thelabel);
+      if (!checkboxvar.checked) {
         labelvar.innerHTML = "Turn on<br>dark mode ðŸŒ“";
-    }
-    else {
+      }
+      else {
         labelvar.innerHTML = "Turn off<br>dark mode ðŸŒ“";
-    }
-}
-
-    (function() {
-  var darkSwitch = document.getElementById("darkSwitch");
-  if (darkSwitch) {
-    initTheme();
-    darkSwitch.addEventListener("change", function(event) {
-      resetTheme();
-    });
-    function initTheme() {
-      var darkThemeSelected =
-        localStorage.getItem("darkSwitch") !== null &&
-        localStorage.getItem("darkSwitch") === "dark";
-      darkSwitch.checked = darkThemeSelected;
-      darkThemeSelected
-        ? document.body.setAttribute("data-theme", "dark")
-        : document.body.removeAttribute("data-theme");
-    }
-    function resetTheme() {
-      if (darkSwitch.checked) {
-        document.body.setAttribute("data-theme", "dark");
-        localStorage.setItem("darkSwitch", "dark");
-      } else {
-        document.body.removeAttribute("data-theme");
-        localStorage.removeItem("darkSwitch");
       }
     }
-  }
-})();
 
-</script>
+    (function () {
+      var darkSwitch = document.getElementById("darkSwitch");
+      if (darkSwitch) {
+        initTheme();
+        darkSwitch.addEventListener("change", function (event) {
+          resetTheme();
+        });
+        function initTheme() {
+          var darkThemeSelected =
+            localStorage.getItem("darkSwitch") !== null &&
+            localStorage.getItem("darkSwitch") === "dark";
+          darkSwitch.checked = darkThemeSelected;
+          darkThemeSelected
+            ? document.body.setAttribute("data-theme", "dark")
+            : document.body.removeAttribute("data-theme");
+        }
+        function resetTheme() {
+          if (darkSwitch.checked) {
+            document.body.setAttribute("data-theme", "dark");
+            localStorage.setItem("darkSwitch", "dark");
+          } else {
+            document.body.removeAttribute("data-theme");
+            localStorage.removeItem("darkSwitch");
+          }
+        }
+      }
+    })();
 
-<!--Dark mode ends-->
+  </script>
 
-    <nav class="navbar sticky-top navbar-expand-xl navbar-dark bg-black py-3">
-        <div class="container-fluid px-3">
-          <a href="#"><img class="img-fluid" src="https://www.unikbrushes.com/img/logo.png"></a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse mybuttons" id="navbarSupportedContent">
-            <ul class="navbar-nav ms-auto">
-                
-              <li class="nav-item px-2 my-2">
-                <a class="nav-link btn text-white" aria-current="page" href="#"><i class="fa-solid fa-house"></i> Home</a>
-              </li>
+  <!--Dark mode ends-->
 
-              <li class="nav-item px-2 my-2">
-                <a class="nav-link btn text-white" aria-current="page" href="#services"><i class="fa-solid fa-computer"></i> Services</a>
-              </li>
-                
-                <li class="nav-item px-2 my-2">
-                <a class="nav-link btn text-white" aria-current="page" href="#about"><i class="fa-solid fa-user"></i> About</a>
-              </li>
-              
-              <li class="nav-item px-2 my-2">
-                <a class="nav-link btn text-white" aria-current="page" href="#pricing"><i class="fa-solid fa-tags"></i> Pricing</a>
-              </li>
+  <nav class="navbar sticky-top navbar-expand-xl navbar-dark bg-black py-3">
+    <div class="container-fluid px-3">
+      <a href="#"><img class="img-fluid" src="https://www.unikbrushes.com/img/logo.png"></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse mybuttons" id="navbarSupportedContent">
+        <ul class="navbar-nav ms-auto">
 
-              <li class="nav-item px-2 my-2">
-                <a class="nav-link btn text-white" aria-current="page" href="#tests"><i class="fa-solid fa-star"></i> Testimonials</a>
-              </li>
-                
+          <li class="nav-item px-2 my-2">
+            <a class="nav-link btn text-white" aria-current="page" href="#"><i class="fa-solid fa-house"></i> Home</a>
+          </li>
 
-              <li class="nav-item px-2 my-2">
-                <a class="nav-link btn text-white" aria-current="page" href="#portfolio"><i class="fa-solid fa-photo-film"></i> Portfolio</a>
-              </li>              
-                
-                <li class="nav-item px-2 my-2">
-                <a class="nav-link btn text-white" aria-current="page" href="#contact"><i class="fa-solid fa-message"></i> Get a quote</a>
-              </li>
-      
-            </ul>
-          </div>
-        </div>
-      </nav>
+          <li class="nav-item px-2 my-2">
+            <a class="nav-link btn text-white" aria-current="page" href="#services"><i class="fa-solid fa-computer"></i>
+              Services</a>
+          </li>
 
-      <div class="container-fluid slider">
-          <div class="container text-center" data-aos="zoom-in">
-              <h1 class="text-white">Web design that feels right</h1>
-              <p class="text-blue">Providing front end web development services since 2016 with 100% clients satisfaction</p>
-              <a href="#portfolio" class="btn py-2 px-5 mx-2 my-2">Check Portfolio</a>
-              <a href="#contact" class="btn bg-orange2 py-2 px-5 mx-2 my-2">Order Now!</a>
-          </div>
-      </div>
+          <li class="nav-item px-2 my-2">
+            <a class="nav-link btn text-white" aria-current="page" href="#about"><i class="fa-solid fa-user"></i>
+              About</a>
+          </li>
 
-      <div class="container-fluid services" id="services">
-        <div class="container">
+          <li class="nav-item px-2 my-2">
+            <a class="nav-link btn text-white" aria-current="page" href="#pricing"><i class="fa-solid fa-tags"></i>
+              Pricing</a>
+          </li>
 
-          <h1 class="text-center">My services</h1>
-          <center><hr align="center" width="50%" style="color: black;" size=5px></center>
-          <p class="text-center">Unikbrushes provides the following services at affordable prices. Check the pricing below.</p>
-
-          <div class="row mx-auto pt-5">
-
-            <div class="col-xl-4 col-lg-6 col-md-6 my-4 mx-auto text-center each-service" data-aos="fade-up">
-              <div class="mx-auto d-flex justify-content-center">
-                <i class="fa-solid fa-computer fa-3x"></i><h2 style="line-height: 58px;" class="ps-2"> Website designing</h2>
-              </div>
-              <p>Providing highly responsive web design and development using HTML5, CSS3, Bootstrap & jQuery.</p>
-            </div>
-
-            <div class="col-xl-4 col-lg-6 col-md-6 my-4 mx-auto text-center each-service" data-aos="fade-up">
-              <div class="mx-auto d-flex justify-content-center">
-                <i class="fa-solid fa-mountain fa-3x"></i><h2 style="line-height: 55px;" class="ps-2"> Logo designing</h2>
-              </div>
-              <p>Providing eye-catching logos at an affordable prices with 100% client's satisfaction.</p>
-            </div>
-
-            <div class="col-xl-4 col-lg-6 col-md-6 my-4 mx-auto text-center each-service" data-aos="fade-up">
-              <div class="mx-auto d-flex justify-content-center">
-                <i class="fa-solid fa-rectangle-ad fa-3x"></i><h2 style="line-height: 55px;" class="ps-2"> Banner designing</h2>
-              </div>
-              <p>I will design an impressive banner ad for your business to attract users. Both animated or static banners are available.</p>
-            </div>
-
-            <div class="col-xl-4 col-lg-6 col-md-6 my-4 mx-auto text-center each-service" data-aos="fade-up">
-              <div class="mx-auto d-flex justify-content-center">
-                <i class="fa-solid fa-image fa-3x"></i><h2 style="line-height: 55px;" class="ps-2"> PSD to HTML</h2>
-              </div>
-              <p>Got a PSD template? I can convert it to HTML/CSS for an affordable price. And yes, of course it will be responsive.</p>
-            </div>
-
-            <div class="col-xl-4 col-lg-6 col-md-6 my-4 mx-auto text-center each-service" data-aos="fade-up">
-              <div class="mx-auto d-flex justify-content-center">
-                <i class="fa-solid fa-chalkboard fa-3x"></i><h2 style="line-height: 55px;" class="ps-2"> Header designing</h2>
-              </div>
-              <p>Need a stunning header for your website? Then you are at the right place. Mockups will be provided regularly.</p>
-            </div>
-
-            <div class="col-xl-4 col-lg-6 col-md-6 my-4 mx-auto text-center each-service" data-aos="fade-up">
-              <div class="mx-auto d-flex justify-content-center">
-                <i class="fa-solid fa-sliders fa-3x"></i><h2 style="line-height: 55px;" class="ps-2"> Business cards</h2>
-              </div>
-              <p>I will design a dazzling business card for your website in which you can promote your business to the next level.</p>
-            </div>
-            
-            
-          </div>
-
-        </div>
-      </div>
-
-      <div class="container-fluid about bg-black" id="about">
-        <div class="container text-center">
-          
-
-          <div class="row">
-            <div class="col-xl-8" data-aos="fade-up">
-              <h1 class="text-white">About Me</h1>
-          <center><hr align="center" width="50%" style="color: white;" size=5px></center>
-          <p>I am <i>Amar Karthik</i>, specialized in Front-End web development having 6+ years of experience in designing web pages using HTML/CSS, Bootstrap, Javascript, jQuery and I have completed more than 100 projects with being my client's satisfaction as my first priority. I'm skilled at sketching an eye-catching logo for your business and I have also designed hundreds of animated banner ads, website headers and some business cards. Also, I have worked with WordPress and other CMS sites. Feel free to check out my portfolio below as I always provide quality designs at affordable prices.</p>
-            </div>
-
-            <div class="col-xl-4" data-aos="fade-down">
-              <img width="75%" class="img-fluid" src="https://www.unikbrushes.com/img/about-img.png">
-                </div>
-        </div>
-
-        </div>
-      </div>
-
-      <div class="container-fluid pricing" id="pricing">
-        <div class="container text-center">
-          <h1>Pricing</h1>
-          <center><hr align="center" width="50%" style="color: black;" size=5px></center>
-          <p>Here are the affordable prices you can get for your designs on internet. <b>BUNCH OF DISCOUNT ON BULK ORDERS!</b></p>
-
-          <div class="row mt-5">
-
-            <div class="col-lg-4 col-md-6" data-aos="fade-up">
-              <div class="card mb-5 mb-lg-0">
-                <div class="card-body">
-                  <h5 class="card-title text-muted text-uppercase text-center">Simple Web Theme</h5>
-                  <h6 class="card-price text-center">$20 - $30</h6>
-                  <hr>
-                  <ul class="fa-ul">
-                    <li><span class="fa-li"><i class="fas fa-check"></i></span>Simple Homepage Design</li>
-                    <li><span class="fa-li"><i class="fas fa-check"></i></span>Responsive Design</li>
-                    <li><span class="fa-li"><i class="fas fa-check"></i></span>Theme Installation</li>
-                    <li><span class="fa-li"><i class="fas fa-check"></i></span>Simple Logo Included</li>
-                    <li><span class="fa-li"><i class="fas fa-check"></i></span>Delivery Time: 2 Days</li>
-                    <li><span class="fa-li"><i class="fas fa-check"></i></span>Additional page Design: $15</li>
-                    <li class="text-muted"><span class="fa-li"><i class="fas fa-times"></i></span>Inner Pages CSS Styling</li>
-                    <li class="text-muted"><span class="fa-li"><i class="fas fa-times"></i></span>Free Animated Banners</li>         
-                    <li class="text-muted"><span class="fa-li"><i class="fas fa-times"></i></span>Slider on the Homepage</li>
-                  </ul>
-                  <div class="d-grid">
-                    <a href="#contact" class="btn bg-orange text-uppercase">Buy NOW!</a>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="col-lg-4 col-md-6" data-aos="fade-up">
-              <div class="card mb-5 mb-lg-0">
-                <div class="card-body">
-                  <h5 class="card-title text-muted text-uppercase text-center">Premium Web Theme</h5>
-                  <h6 class="card-price text-center">$35 - $45</h6>
-                  <hr>
-                  <ul class="fa-ul">
-                    <li><span class="fa-li"><i class="fas fa-check"></i></span>Unique Homepage Design</li>
-                    <li><span class="fa-li"><i class="fas fa-check"></i></span>Responsive Design</li>
-                    <li><span class="fa-li"><i class="fas fa-check"></i></span>Theme Installation</li>
-                    <li><span class="fa-li"><i class="fas fa-check"></i></span>Simple Logo Included</li>
-                    <li><span class="fa-li"><i class="fas fa-check"></i></span>Delivery Time: 3 Days</li>
-                    <li><span class="fa-li"><i class="fas fa-check"></i></span>Additional page Design: $15</li>
-                    <li><span class="fa-li"><i class="fas fa-check"></i></span>Inner Pages CSS Styling</li>
-                    <li><span class="fa-li"><i class="fas fa-check"></i></span>3 Animated Banners</li>
-                    <li class="text-muted"><span class="fa-li"><i class="fas fa-times"></i></span>Slider on the Homepage</li>
-                  </ul>
-                  <div class="d-grid">
-                    <a href="#contact" class="btn bg-orange text-uppercase">Buy NOW!</a>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="col-lg-4" data-aos="fade-up">
-              <div class="card most-popular">
-                <div class="popular bg-blue2">
-                  <h2 class="text-white m-0 py-3">MOST POPULAR</h2>
-                </div>
-                <div class="card-body">
-                  <h5 class="card-title text-muted text-uppercase text-center">Professional Web Theme</h5>
-                  <h6 class="card-price text-center">$50 - $75</h6>
-                  <hr>
-                  <ul class="fa-ul">
-                    <li><span class="fa-li"><i class="fas fa-check"></i></span>Eye-catching Homepage Design</li>
-                    <li><span class="fa-li"><i class="fas fa-check"></i></span>Responsive Design</li>
-                    <li><span class="fa-li"><i class="fas fa-check"></i></span>Theme Installation</li>
-                    <li><span class="fa-li"><i class="fas fa-check"></i></span>Professional Logo Included</li>
-                    <li><span class="fa-li"><i class="fas fa-check"></i></span>Delivery Time: 4 Days</li>
-                    <li><span class="fa-li"><i class="fas fa-check"></i></span>Additional page Design: $10</li>
-                    <li><span class="fa-li"><i class="fas fa-check"></i></span>Inner Pages CSS Styling</li>
-                    <li><span class="fa-li"><i class="fas fa-check"></i></span>4 Animated Banners</li>
-                    <li><span class="fa-li"><i class="fas fa-check"></i></span>Slider on the Homepage</li>
-                  </ul>
-                  <div class="d-grid">
-                    <a href="#contact" class="btn bg-blue2 text-white text-uppercase">Buy NOW!</a>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-        </div>
-      </div>
-
-      
-
-    <div class="container-fluid tests bg-black" id="tests">
-      <div class="container text-center">
-
-        <h1 class="text-white">Testimonials</h1>
-          <center><hr align="center" width="50%" style="color: white;" size=5px></center>
-          <div class="top">
-          <p>Let us see what our honest clients have told about me and my work.</p>
-            </div>
-            </div>
-
-          <!--      Carousel Starts-->
-          <div id="carouselExampleIndicators" class="carousel slide bg-extra" data-bs-ride="carousel" >
-            <div class="container">
-      <div class="carousel-indicators">
-        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
-        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
-        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3" aria-label="Slide 4"></button>
-        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="4" aria-label="Slide 5"></button>
-        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="5" aria-label="Slide 6"></button>
-        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="6" aria-label="Slide 7"></button>
-        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="7" aria-label="Slide 8"></button>
-        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="8" aria-label="Slide 9"></button>
-        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="9" aria-label="Slide 10"></button>
-      </div>
-      <div class="carousel-inner text-center" style="padding: 6em 3em">
-          
-        <div class="carousel-item active">
-          <figure>
-      <blockquote class="blockquote">
-        <p class="display-5 text-white"><i class="fa-solid fa-quote-left"></i> I got my logo. I am lucky. Thank you guy! Wish you to get good business!</p>
-      </blockquote>
-      <figcaption class="blockquote-footer text-right" style="color: gray">
-        By <cite title="Source Title">Myozinmin</cite>
-      </figcaption>
-    </figure>
-        </div>
-
-        <div class="carousel-item">
-          <figure>
-      <blockquote class="blockquote">
-        <p class="display-5 text-white"><i class="fa-solid fa-quote-left"></i> Thanks for my logo bro! You have done great work and it fits perfect to my needs! Keep up your great work!</p>
-      </blockquote>
-      <figcaption class="blockquote-footer text-right" style="color: gray">
-        By <cite title="Source Title">GK Adam</cite>
-      </figcaption>
-    </figure>
-        </div>
-
-        <div class="carousel-item">
-          <figure>
-      <blockquote class="blockquote">
-        <p class="display-5 text-white"><i class="fa-solid fa-quote-left"></i> Have a good skills in banner designing at very afford able price.</p>
-      </blockquote>
-      <figcaption class="blockquote-footer text-right" style="color: gray">
-        By <cite title="Source Title">EarnAndEarn Team</cite>
-      </figcaption>
-    </figure>
-        </div>
-
-        <div class="carousel-item">
-          <figure>
-      <blockquote class="blockquote">
-        <p class="display-5 text-white"><i class="fa-solid fa-quote-left"></i> Very GREAT Graphic designer. Just got 15 Banners Done!!  Thank You</p>
-      </blockquote>
-      <figcaption class="blockquote-footer text-right" style="color: gray">
-        By <cite title="Source Title">BrandStar5</cite>
-      </figcaption>
-    </figure>
-        </div>
-
-        <div class="carousel-item">
-          <figure>
-      <blockquote class="blockquote">
-        <p class="display-5 text-white"><i class="fa-solid fa-quote-left"></i> Thank you for great work on my new site http://www.clix-ads.co/  .Fantastic design,fast installation,professional work .Keep going that way</p>
-      </blockquote>
-      <figcaption class="blockquote-footer text-right" style="color: gray">
-        By <cite title="Source Title">Clix Ads team</cite>
-      </figcaption>
-    </figure>
-        </div>
-
-        <div class="carousel-item">
-          <figure>
-      <blockquote class="blockquote">
-        <p class="display-5 text-white"><i class="fa-solid fa-quote-left"></i> Thank you for the fast and very professional service friend. 
-          Great job at a very affordable, reasonable prices.
-          I'll surely do business with you again in the future.</p>
-      </blockquote>
-      <figcaption class="blockquote-footer text-right" style="color: gray">
-        By <cite title="Source Title">AveryWeb Team</cite>
-      </figcaption>
-    </figure>
-        </div>
-
-        <div class="carousel-item">
-          <figure>
-      <blockquote class="blockquote">
-        <p class="display-5 text-white"><i class="fa-solid fa-quote-left"></i> Thanks for the quick and professional service! Will do business with you again in the future!
-
-          Highly recommended for anyone looking for a professional banner, logo or template at very reasonable prices!</p>
-      </blockquote>
-      <figcaption class="blockquote-footer text-right" style="color: gray">
-        By <cite title="Source Title">Denclu</cite>
-      </figcaption>
-    </figure>
-        </div>
-
-        <div class="carousel-item">
-          <figure>
-      <blockquote class="blockquote">
-        <p class="display-5 text-white"><i class="fa-solid fa-quote-left"></i> Got my website designed very quickly. Its very awesome.</p>
-      </blockquote>
-      <figcaption class="blockquote-footer text-right" style="color: gray">
-        By <cite title="Source Title">Therupees.in team</cite>
-      </figcaption>
-    </figure>
-        </div>
-
-        <div class="carousel-item">
-          <figure>
-      <blockquote class="blockquote">
-        <p class="display-5 text-white"><i class="fa-solid fa-quote-left"></i> Amazing theme designed by him, has good skills regarding website design and graphics. 100% recommended.</p>
-      </blockquote>
-      <figcaption class="blockquote-footer text-right" style="color: gray">
-        By <cite title="Source Title">KryptoTrade team</cite>
-      </figcaption>
-    </figure>
-        </div>
-        
-        <div class="carousel-item">
-          <figure>
-      <blockquote class="blockquote">
-        <p class="display-5 text-white"><i class="fa-solid fa-quote-left"></i> Very professional and quick work! I will for sure use these services again! Very pleased with the work done : )</p>
-      </blockquote>
-      <figcaption class="blockquote-footer text-right" style="color: gray">
-        By <cite title="Source Title">Brandon (FastcashGPT owner)</cite>
-      </figcaption>
-    </figure>
-        </div>
-
-      </div>
-      
-    </div>
-    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
-      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-      <span class="visually-hidden">Previous</span>
-    </button>
-    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
-      <span class="carousel-control-next-icon" aria-hidden="true"></span>
-      <span class="visually-hidden">Next</span>
-    </button>
-
-        </div>
-      </div>
+          <li class="nav-item px-2 my-2">
+            <a class="nav-link btn text-white" aria-current="page" href="#tests"><i class="fa-solid fa-star"></i>
+              Testimonials</a>
+          </li>
 
 
-    <div class="container-fluid portfolio" id="portfolio">
-      <div class="container text-center">
-        <h1>My Portfolio</h1>
-        <center><hr align="center" width="50%" style="color: black;" size=5px></center>
-        <p>Here are some of the images from my portfolio. To view my full portfolio, <a href="portfolio.php">Click here</a>.</p>
-        <div class="row">
-            
-            <div class="col-md-4 my-3" data-aos="zoom-in">
-            <div class="card">
-              <div class="zoom">
-              <a target="_blank" href="https://www.unikbrushes.com/img/portfolio/27.jpg"><img src="https://www.unikbrushes.com/img/portfolio/2727.jpg" class="card-img-top img-fluid" alt="1stimage"></a>
-              </div>
-            </div>
-          </div>
+          <li class="nav-item px-2 my-2">
+            <a class="nav-link btn text-white" aria-current="page" href="#portfolio"><i
+                class="fa-solid fa-photo-film"></i> Portfolio</a>
+          </li>
 
-          <div class="col-md-4 my-3" data-aos="zoom-in">
-            <div class="card">
-              <div class="zoom">
-              <a target="_blank" href="https://www.unikbrushes.com/img/portfolio/29.jpg"><img src="https://www.unikbrushes.com/img/portfolio/2929.jpg" class="card-img-top img-fluid" alt="1stimage"></a>
-              </div>
-            </div>
-          </div>
+          <li class="nav-item px-2 my-2">
+            <a class="nav-link btn text-white" aria-current="page" href="#contact"><i class="fa-solid fa-message"></i>
+              Get a quote</a>
+          </li>
 
-          <div class="col-md-4 my-3" data-aos="zoom-in">
-            <div class="card">
-              <div class="zoom">
-              <a target="_blank" href="https://www.unikbrushes.com/img/portfolio/12.jpg"><img src="https://www.unikbrushes.com/img/portfolio/1212.jpg" class="card-img-top img-fluid" alt="1stimage"></a>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-md-4 my-3" data-aos="zoom-in">
-            <div class="card">
-              <div class="zoom">
-              <a target="_blank" href="https://www.unikbrushes.com/img/portfolio/1.jpg"><img src="https://www.unikbrushes.com/img/portfolio/11.jpg" class="card-img-top img-fluid" alt="1stimage"></a>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-md-4 my-3" data-aos="zoom-in">
-            <div class="card">
-              <div class="zoom">
-              <a target="_blank" href="https://www.unikbrushes.com/img/portfolio/28.jpg"><img src="https://www.unikbrushes.com/img/portfolio/2828.jpg" class="card-img-top img-fluid" alt="1stimage"></a>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-md-4 my-3" data-aos="zoom-in">
-            <div class="card">
-              <div class="zoom">
-              <a target="_blank" href="https://www.unikbrushes.com/img/portfolio/3.jpg"><img src="https://www.unikbrushes.com/img/portfolio/33.jpg" class="card-img-top img-fluid" alt="1stimage"></a>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-md-4 my-3" data-aos="zoom-in">
-            <div class="card">
-              <div class="zoom">
-              <a target="_blank" href="https://www.unikbrushes.com/img/portfolio/4.jpg"><img src="https://www.unikbrushes.com/img/portfolio/44.jpg" class="card-img-top img-fluid" alt="1stimage"></a>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-md-4 my-3" data-aos="zoom-in">
-            <div class="card">
-              <div class="zoom">
-              <a target="_blank" href="https://www.unikbrushes.com/img/portfolio/5.jpg"><img src="https://www.unikbrushes.com/img/portfolio/55.jpg" class="card-img-top img-fluid" alt="1stimage"></a>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-md-4 my-3" data-aos="zoom-in">
-            <div class="card">
-              <div class="zoom">
-              <a target="_blank" href="https://www.unikbrushes.com/img/portfolio/6.jpg"><img src="https://www.unikbrushes.com/img/portfolio/66.jpg" class="card-img-top img-fluid" alt="1stimage"></a>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-md-4 my-3" data-aos="zoom-in">
-            <div class="card">
-              <div class="zoom">
-              <a target="_blank" href="https://www.unikbrushes.com/img/portfolio/7.jpg"><img src="https://www.unikbrushes.com/img/portfolio/77.jpg" class="card-img-top img-fluid" alt="1stimage"></a>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-md-4 my-3" data-aos="zoom-in">
-            <div class="card">
-              <div class="zoom">
-              <a target="_blank" href="https://www.unikbrushes.com/img/portfolio/8.jpg"><img src="https://www.unikbrushes.com/img/portfolio/88.jpg" class="card-img-top img-fluid" alt="1stimage"></a>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-md-4 my-3" data-aos="zoom-in">
-            <div class="card">
-              <div class="zoom">
-              <a target="_blank" href="https://www.unikbrushes.com/img/portfolio/9.jpg"><img src="https://www.unikbrushes.com/img/portfolio/99.jpg" class="card-img-top img-fluid" alt="1stimage"></a>
-              </div>
-            </div>
-          </div>
-
-          <h1 class="mt-5">My skills</h1>
-          <center><hr align="center" width="50%" style="color: black;" size=5px></center>
-          <div class="col-md-2 mt-3" data-aos="fade-right">
-            <img class="img-fluid" width="75%" src=https://www.unikbrushes.com/img/html.png>
-          </div>
-
-          <div class="col-md-2 mt-3" data-aos="fade-right">
-            <img class="img-fluid" width="75%" src=https://www.unikbrushes.com/img/css.png>
-          </div>
-
-          <div class="col-md-2 mt-3" data-aos="fade-right">
-            <img class="img-fluid" width="75%" src=https://www.unikbrushes.com/img/javascript.png>
-          </div>
-          
-          <div class="col-md-2 mt-3" data-aos="fade-right">
-            <img class="img-fluid" width="75%" src=https://www.unikbrushes.com/img/boot.png>
-          </div>
-
-          <div class="col-md-2 mt-3" data-aos="fade-right">
-            <img class="img-fluid" width="75%" src=https://www.unikbrushes.com/img/jquery.png>
-          </div>
-
-          <div class="col-md-2 mt-3" data-aos="fade-right">
-            <img class="img-fluid" width="75%" src=https://www.unikbrushes.com/img/react.png>
-          </div>
-
-        </div>
+        </ul>
       </div>
     </div>
+  </nav>
 
-
-
-    <div class="container-fluid contact" id="contact">
-      <div class="container">
-        <h1 class="text-center">Get a Quote</h1>
-        <center><hr align="center" width="50%" style="color: black;" size=5px></center>
-        <p class="text-center">Want to get a quote for your design? Feel free to contact me by filling out the below form and submitting it.</p>
-
-  <div class="row" >
-
-      <div class="col-md-12 mb-md-0">
-
-          <form id="contact-form" method="post" action="contact.php" role="form">
-
-    <div class="messages"></div>
-
-    <div class="controls">
-
-        <div class="row">
-            <div class="col-md-6">
-                <div class="form-group mt-3">
-                    <label for="form_name">Firstname *</label>
-                    <input id="form_name" type="text" name="name" class="form-control" placeholder="Please enter your firstname *" required="required" data-error="Firstname is required.">
-                    <div class="help-block with-errors"></div>
-                </div>
-            </div>
-            <div class="col-md-6">
-                <div class="form-group mt-3">
-                    <label for="form_lastname">Lastname *</label>
-                    <input id="form_lastname" type="text" name="surname" class="form-control" placeholder="Please enter your lastname *" required="required" data-error="Lastname is required.">
-                    <div class="help-block with-errors"></div>
-                </div>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-md-6">
-                <div class="form-group mt-3">
-                    <label for="form_email">Email *</label>
-                    <input id="form_email" type="email" name="email" class="form-control" placeholder="Please enter your email *" required="required" data-error="Valid email is required.">
-                    <div class="help-block with-errors"></div>
-                </div>
-            </div>
-            <div class="col-md-6">
-                  <div class="form-group mt-3">
-                    <label for="form_email">Budget</label>
-                    <input id="form_budget" type="budget" name="budget" class="form-control" placeholder="Please write your budget">
-                    <div class="help-block with-errors"></div>
-                </div>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-md-12">
-                <div class="form-group mt-3">
-                    <label for="form_message">Message *</label>
-                    <textarea id="form_message" name="message" class="form-control" placeholder="Message for me *" rows="4" required="required" data-error="Please, leave us a message."></textarea>
-                    <div class="help-block with-errors"></div>
-                </div>
-            </div>
-            <div class="col-md-12">
-                <center><input type="submit" class="btn btn-success btn-send mt-3" value="Send message"></center>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-md-12">
-                <p class="text-muted mt-3 text-center">
-                    <strong>*</strong> These fields are required.</p>
-            </div>
-        </div>
+  <div class="container-fluid slider">
+    <div class="container text-center" data-aos="zoom-in">
+      <h1 class="text-white">Web design that feels right</h1>
+      <p class="text-blue">Providing front end web development services since 2016 with 100% clients satisfaction</p>
+      <a href="#portfolio" class="btn py-2 px-5 mx-2 my-2">Check Portfolio</a>
+      <a href="#contact" class="btn bg-orange2 py-2 px-5 mx-2 my-2">Order Now!</a>
     </div>
-
-</form>
-
   </div>
-</div>
-      </div>
-    </div>
-    
-    <div class="banner" style="padding: 0em 1em 4em 1em">
-        <center><img src="https://www.unikbrushes.com/banners/banner2.gif" class="img-fluid"></center>
-    </div>
-    
-    <div class="container-fluid top-nav bg-orange">
-      <div class="container p-2">
 
-        <div class="row">
+  <div class="container-fluid services" id="services">
+    <div class="container">
 
-          <div class="col-md-8 m-0 extrass text-center text-md-start" >
-           <p class="py-2"><i class="fa-solid fa-envelope"></i> <a href="mailto:support@unikbrushes.com">support@unikbrushes.com</a> &nbsp; <i class="fa-solid fa-phone"></i> <a href="tel:+918762618517">+91 8762-618517</a></p>
+      <h1 class="text-center">My services</h1>
+      <center>
+        <hr align="center" width="50%" style="color: black;" size=5px>
+      </center>
+      <p class="text-center">Unikbrushes provides the following services at affordable prices. Check the pricing below.
+      </p>
+
+      <div class="row mx-auto pt-5">
+
+        <div class="col-xl-4 col-lg-6 col-md-6 my-4 mx-auto text-center each-service" data-aos="fade-up">
+          <div class="mx-auto d-flex justify-content-center">
+            <i class="fa-solid fa-computer fa-3x"></i>
+            <h2 style="line-height: 58px;" class="ps-2"> Website designing</h2>
           </div>
-
-          <div class="col-md-4 m-0 text-center text-md-end" >
-            <p>
-              <a href="https://wa.me/918762618517" target="_blank"><i class="fa-brands fa-whatsapp fa-2x"></i></a> &nbsp;
-              <a href="https://instagram.com/unikbrushes" target="_blank"><i class="fa-brands fa-instagram fa-2x"></i></a> &nbsp;
-              <a href="https://facebook.com/unikbrushes" target="_blank"><i class="fa-brands fa-facebook fa-2x"></i></a> &nbsp;
-              <a href="skype:live:bucksman5233?chat" target="_blank"><i class="fa-brands fa-skype fa-2x"></i></a>
-            </p>
-            
-          </div>
-
+          <p>Providing highly responsive web design and development using HTML5, CSS3, Bootstrap & jQuery.</p>
         </div>
-          
+
+        <div class="col-xl-4 col-lg-6 col-md-6 my-4 mx-auto text-center each-service" data-aos="fade-up">
+          <div class="mx-auto d-flex justify-content-center">
+            <i class="fa-solid fa-mountain fa-3x"></i>
+            <h2 style="line-height: 55px;" class="ps-2"> Logo designing</h2>
+          </div>
+          <p>Providing eye-catching logos at an affordable prices with 100% client's satisfaction.</p>
+        </div>
+
+        <div class="col-xl-4 col-lg-6 col-md-6 my-4 mx-auto text-center each-service" data-aos="fade-up">
+          <div class="mx-auto d-flex justify-content-center">
+            <i class="fa-solid fa-rectangle-ad fa-3x"></i>
+            <h2 style="line-height: 55px;" class="ps-2"> Banner designing</h2>
+          </div>
+          <p>I will design an impressive banner ad for your business to attract users. Both animated or static banners
+            are available.</p>
+        </div>
+
+        <div class="col-xl-4 col-lg-6 col-md-6 my-4 mx-auto text-center each-service" data-aos="fade-up">
+          <div class="mx-auto d-flex justify-content-center">
+            <i class="fa-solid fa-image fa-3x"></i>
+            <h2 style="line-height: 55px;" class="ps-2"> PSD to HTML</h2>
+          </div>
+          <p>Got a PSD template? I can convert it to HTML/CSS for an affordable price. And yes, of course it will be
+            responsive.</p>
+        </div>
+
+        <div class="col-xl-4 col-lg-6 col-md-6 my-4 mx-auto text-center each-service" data-aos="fade-up">
+          <div class="mx-auto d-flex justify-content-center">
+            <i class="fa-solid fa-chalkboard fa-3x"></i>
+            <h2 style="line-height: 55px;" class="ps-2"> Header designing</h2>
+          </div>
+          <p>Need a stunning header for your website? Then you are at the right place. Mockups will be provided
+            regularly.</p>
+        </div>
+
+        <div class="col-xl-4 col-lg-6 col-md-6 my-4 mx-auto text-center each-service" data-aos="fade-up">
+          <div class="mx-auto d-flex justify-content-center">
+            <i class="fa-solid fa-sliders fa-3x"></i>
+            <h2 style="line-height: 55px;" class="ps-2"> Business cards</h2>
+          </div>
+          <p>I will design a dazzling business card for your website in which you can promote your business to the next
+            level.</p>
+        </div>
+
+
       </div>
+
+    </div>
+  </div>
+
+  <div class="container-fluid about bg-black" id="about">
+    <div class="container text-center">
+
+
+      <div class="row">
+        <div class="col-xl-8" data-aos="fade-up">
+          <h1 class="text-white">About Me</h1>
+          <center>
+            <hr align="center" width="50%" style="color: white;" size=5px>
+          </center>
+          <p>I am <i>Amar Karthik</i>, specialized in Front-End web development having 6+ years of experience in
+            designing web pages using HTML/CSS, Bootstrap, Javascript, jQuery and I have completed more than 100
+            projects with being my client's satisfaction as my first priority. I'm skilled at sketching an eye-catching
+            logo for your business and I have also designed hundreds of animated banner ads, website headers and some
+            business cards. Also, I have worked with WordPress and other CMS sites. Feel free to check out my portfolio
+            below as I always provide quality designs at affordable prices.</p>
+        </div>
+
+        <div class="col-xl-4" data-aos="fade-down">
+          <img width="75%" class="img-fluid" src="https://www.unikbrushes.com/img/about-img.png">
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="container-fluid pricing" id="pricing">
+    <div class="container text-center">
+      <h1>Pricing</h1>
+      <center>
+        <hr align="center" width="50%" style="color: black;" size=5px>
+      </center>
+      <p>Here are the affordable prices you can get for your designs on internet. <b>BUNCH OF DISCOUNT ON BULK
+          ORDERS!</b></p>
+
+      <div class="row mt-5">
+
+        <div class="col-lg-4 col-md-6" data-aos="fade-up">
+          <div class="card mb-5 mb-lg-0">
+            <div class="card-body">
+              <h5 class="card-title text-muted text-uppercase text-center">Simple Web Theme</h5>
+              <h6 class="card-price text-center">$20 - $30</h6>
+              <hr>
+              <ul class="fa-ul">
+                <li><span class="fa-li"><i class="fas fa-check"></i></span>Simple Homepage Design</li>
+                <li><span class="fa-li"><i class="fas fa-check"></i></span>Responsive Design</li>
+                <li><span class="fa-li"><i class="fas fa-check"></i></span>Theme Installation</li>
+                <li><span class="fa-li"><i class="fas fa-check"></i></span>Simple Logo Included</li>
+                <li><span class="fa-li"><i class="fas fa-check"></i></span>Delivery Time: 2 Days</li>
+                <li><span class="fa-li"><i class="fas fa-check"></i></span>Additional page Design: $15</li>
+                <li class="text-muted"><span class="fa-li"><i class="fas fa-times"></i></span>Inner Pages CSS Styling
+                </li>
+                <li class="text-muted"><span class="fa-li"><i class="fas fa-times"></i></span>Free Animated Banners</li>
+                <li class="text-muted"><span class="fa-li"><i class="fas fa-times"></i></span>Slider on the Homepage
+                </li>
+              </ul>
+              <div class="d-grid">
+                <a href="#contact" class="btn bg-orange text-uppercase">Buy NOW!</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6" data-aos="fade-up">
+          <div class="card mb-5 mb-lg-0">
+            <div class="card-body">
+              <h5 class="card-title text-muted text-uppercase text-center">Premium Web Theme</h5>
+              <h6 class="card-price text-center">$35 - $45</h6>
+              <hr>
+              <ul class="fa-ul">
+                <li><span class="fa-li"><i class="fas fa-check"></i></span>Unique Homepage Design</li>
+                <li><span class="fa-li"><i class="fas fa-check"></i></span>Responsive Design</li>
+                <li><span class="fa-li"><i class="fas fa-check"></i></span>Theme Installation</li>
+                <li><span class="fa-li"><i class="fas fa-check"></i></span>Simple Logo Included</li>
+                <li><span class="fa-li"><i class="fas fa-check"></i></span>Delivery Time: 3 Days</li>
+                <li><span class="fa-li"><i class="fas fa-check"></i></span>Additional page Design: $15</li>
+                <li><span class="fa-li"><i class="fas fa-check"></i></span>Inner Pages CSS Styling</li>
+                <li><span class="fa-li"><i class="fas fa-check"></i></span>3 Animated Banners</li>
+                <li class="text-muted"><span class="fa-li"><i class="fas fa-times"></i></span>Slider on the Homepage
+                </li>
+              </ul>
+              <div class="d-grid">
+                <a href="#contact" class="btn bg-orange text-uppercase">Buy NOW!</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4" data-aos="fade-up">
+          <div class="card most-popular">
+            <div class="popular bg-blue2">
+              <h2 class="text-white m-0 py-3">MOST POPULAR</h2>
+            </div>
+            <div class="card-body">
+              <h5 class="card-title text-muted text-uppercase text-center">Professional Web Theme</h5>
+              <h6 class="card-price text-center">$50 - $75</h6>
+              <hr>
+              <ul class="fa-ul">
+                <li><span class="fa-li"><i class="fas fa-check"></i></span>Eye-catching Homepage Design</li>
+                <li><span class="fa-li"><i class="fas fa-check"></i></span>Responsive Design</li>
+                <li><span class="fa-li"><i class="fas fa-check"></i></span>Theme Installation</li>
+                <li><span class="fa-li"><i class="fas fa-check"></i></span>Professional Logo Included</li>
+                <li><span class="fa-li"><i class="fas fa-check"></i></span>Delivery Time: 4 Days</li>
+                <li><span class="fa-li"><i class="fas fa-check"></i></span>Additional page Design: $10</li>
+                <li><span class="fa-li"><i class="fas fa-check"></i></span>Inner Pages CSS Styling</li>
+                <li><span class="fa-li"><i class="fas fa-check"></i></span>4 Animated Banners</li>
+                <li><span class="fa-li"><i class="fas fa-check"></i></span>Slider on the Homepage</li>
+              </ul>
+              <div class="d-grid">
+                <a href="#contact" class="btn bg-blue2 text-white text-uppercase">Buy NOW!</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
   </div>
 
 
-    <div class="container-fluid bg-black footer" id="footer">
+
+  <div class="container-fluid tests bg-black" id="tests">
+    <div class="container text-center">
+
+      <h1 class="text-white">Testimonials</h1>
+      <center>
+        <hr align="center" width="50%" style="color: white;" size=5px>
+      </center>
+      <div class="top">
+        <p>Let us see what our honest clients have told about me and my work.</p>
+      </div>
+    </div>
+
+    <!--      Carousel Starts-->
+    <div id="carouselExampleIndicators" class="carousel slide bg-extra" data-bs-ride="carousel">
       <div class="container">
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
+            aria-current="true" aria-label="Slide 1"></button>
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+            aria-label="Slide 2"></button>
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+            aria-label="Slide 3"></button>
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3"
+            aria-label="Slide 4"></button>
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="4"
+            aria-label="Slide 5"></button>
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="5"
+            aria-label="Slide 6"></button>
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="6"
+            aria-label="Slide 7"></button>
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="7"
+            aria-label="Slide 8"></button>
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="8"
+            aria-label="Slide 9"></button>
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="9"
+            aria-label="Slide 10"></button>
+        </div>
+        <div class="carousel-inner text-center" style="padding: 6em 3em">
 
-        <div class="row text-white text-center">
-
-          <div class="col-md-4 left-footer p-3" data-aos="fade-right">
-            <h4 class="text-blue">About me</h4>
-            <div class="me">
-              <img src="https://www.unikbrushes.com/img/me.jpg" class="img-fluid mb-3" style="border-radius: 50%;" data-aos="zoom-in">
-            </div>
-            <p>I'm Amar, a Front-end web developer having 6+ years of experience into designing websites using HTML, CSS, JavaScript, Bootstrap, jQuery.<a target="_blank" href="https://www.learnmall.in/cert/FDE448338B"> Click here to view my certification.</a></p>
-            <p><a target="_blank" href="https://www.instagram.com/unikbrushes/"><i class="fa-brands fa-instagram fa-2x me-1"></i></a> <a target="_blank" href="skype:live:bucksman5233?chat"><i class="fa-brands fa-skype fa-2x me-1"></i></a> <a target="_blank" href="https://www.facebook.com/unikbrushes"><i class="fa-brands fa-facebook fa-2x me-1"></i></a> <a target="_blank" href="https://www.linkedin.com/in/amar-karthik"><i class="fa-brands fa-linkedin fa-2x me-1"></i></a></p>
+          <div class="carousel-item active">
+            <figure>
+              <blockquote class="blockquote">
+                <p class="display-5 text-white"><i class="fa-solid fa-quote-left"></i> I got my logo. I am lucky. Thank
+                  you guy! Wish you to get good business!</p>
+              </blockquote>
+              <figcaption class="blockquote-footer text-right" style="color: gray">
+                By <cite title="Source Title">Myozinmin</cite>
+              </figcaption>
+            </figure>
           </div>
 
-          <div class="col-md-2 center-footer">
-
+          <div class="carousel-item">
+            <figure>
+              <blockquote class="blockquote">
+                <p class="display-5 text-white"><i class="fa-solid fa-quote-left"></i> Thanks for my logo bro! You have
+                  done great work and it fits perfect to my needs! Keep up your great work!</p>
+              </blockquote>
+              <figcaption class="blockquote-footer text-right" style="color: gray">
+                By <cite title="Source Title">GK Adam</cite>
+              </figcaption>
+            </figure>
           </div>
 
-          <div class="col-md-6 right-footer p-3" data-aos="fade-right">
-            <h4 class="text-blue">Refund Policy</h4>
-            <p>We don't offer refunds to clients when all of our work is completed. But we will show mockups before the final order delivery and If the client is not satisfied with that design, then we will offer the refund according to the completion of order.</p>
+          <div class="carousel-item">
+            <figure>
+              <blockquote class="blockquote">
+                <p class="display-5 text-white"><i class="fa-solid fa-quote-left"></i> Have a good skills in banner
+                  designing at very afford able price.</p>
+              </blockquote>
+              <figcaption class="blockquote-footer text-right" style="color: gray">
+                By <cite title="Source Title">EarnAndEarn Team</cite>
+              </figcaption>
+            </figure>
+          </div>
 
-            <h4 class="text-blue mt-4">Payment Processors</h4>
-            <p>I accept payments from PayPal(with fees), Payeer, PerfectMoney, Bitcoin, Ethereum, Litecoin, Dogecoin, Bank Transfer(Only for Indians) and UPI payments(Only for Indians).</p>
+          <div class="carousel-item">
+            <figure>
+              <blockquote class="blockquote">
+                <p class="display-5 text-white"><i class="fa-solid fa-quote-left"></i> Very GREAT Graphic designer. Just
+                  got 15 Banners Done!! Thank You</p>
+              </blockquote>
+              <figcaption class="blockquote-footer text-right" style="color: gray">
+                By <cite title="Source Title">BrandStar5</cite>
+              </figcaption>
+            </figure>
+          </div>
+
+          <div class="carousel-item">
+            <figure>
+              <blockquote class="blockquote">
+                <p class="display-5 text-white"><i class="fa-solid fa-quote-left"></i> Thank you for great work on my
+                  new site http://www.clix-ads.co/ .Fantastic design,fast installation,professional work .Keep going
+                  that way</p>
+              </blockquote>
+              <figcaption class="blockquote-footer text-right" style="color: gray">
+                By <cite title="Source Title">Clix Ads team</cite>
+              </figcaption>
+            </figure>
+          </div>
+
+          <div class="carousel-item">
+            <figure>
+              <blockquote class="blockquote">
+                <p class="display-5 text-white"><i class="fa-solid fa-quote-left"></i> Thank you for the fast and very
+                  professional service friend.
+                  Great job at a very affordable, reasonable prices.
+                  I'll surely do business with you again in the future.</p>
+              </blockquote>
+              <figcaption class="blockquote-footer text-right" style="color: gray">
+                By <cite title="Source Title">AveryWeb Team</cite>
+              </figcaption>
+            </figure>
+          </div>
+
+          <div class="carousel-item">
+            <figure>
+              <blockquote class="blockquote">
+                <p class="display-5 text-white"><i class="fa-solid fa-quote-left"></i> Thanks for the quick and
+                  professional service! Will do business with you again in the future!
+
+                  Highly recommended for anyone looking for a professional banner, logo or template at very reasonable
+                  prices!</p>
+              </blockquote>
+              <figcaption class="blockquote-footer text-right" style="color: gray">
+                By <cite title="Source Title">Denclu</cite>
+              </figcaption>
+            </figure>
+          </div>
+
+          <div class="carousel-item">
+            <figure>
+              <blockquote class="blockquote">
+                <p class="display-5 text-white"><i class="fa-solid fa-quote-left"></i> Got my website designed very
+                  quickly. Its very awesome.</p>
+              </blockquote>
+              <figcaption class="blockquote-footer text-right" style="color: gray">
+                By <cite title="Source Title">Therupees.in team</cite>
+              </figcaption>
+            </figure>
+          </div>
+
+          <div class="carousel-item">
+            <figure>
+              <blockquote class="blockquote">
+                <p class="display-5 text-white"><i class="fa-solid fa-quote-left"></i> Amazing theme designed by him,
+                  has good skills regarding website design and graphics. 100% recommended.</p>
+              </blockquote>
+              <figcaption class="blockquote-footer text-right" style="color: gray">
+                By <cite title="Source Title">KryptoTrade team</cite>
+              </figcaption>
+            </figure>
+          </div>
+
+          <div class="carousel-item">
+            <figure>
+              <blockquote class="blockquote">
+                <p class="display-5 text-white"><i class="fa-solid fa-quote-left"></i> Very professional and quick work!
+                  I will for sure use these services again! Very pleased with the work done : )</p>
+              </blockquote>
+              <figcaption class="blockquote-footer text-right" style="color: gray">
+                By <cite title="Source Title">Brandon (FastcashGPT owner)</cite>
+              </figcaption>
+            </figure>
           </div>
 
         </div>
 
-        <center><hr align="center" style="color: white;" size=5px></center>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+        data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+        data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
 
-        <p class="text-center">Copyright Â© 2016 - 2022 <a href="https://www.unikbrushes.com">Unikbrushes.com</a> All rights reserved.</p>
+    </div>
+  </div>
+
+
+  <div class="container-fluid portfolio" id="portfolio">
+    <div class="container text-center">
+      <h1>My Portfolio</h1>
+      <center>
+        <hr align="center" width="50%" style="color: black;" size=5px>
+      </center>
+      <p>Here are some of the images from my portfolio. To view my full portfolio, <a href="portfolio.php">Click
+          here</a>.</p>
+      <div class="row">
+
+        <div class="col-md-4 p-lg-4 my-3 my-lg-0" data-aos="zoom-in">
+          <div class="card">
+            <div class="zoom">
+              <a target="_blank" href="https://www.unikbrushes.com/img/portfolio/30.jpg"><img
+                  src="https://www.unikbrushes.com/img/portfolio/3030.jpg" class="card-img-top img-fluid"
+                  alt="1stimage"></a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4 p-lg-4 my-3 my-lg-0" data-aos="zoom-in">
+          <div class="card">
+            <div class="zoom">
+              <a target="_blank" href="https://www.unikbrushes.com/img/portfolio/27.jpg"><img
+                  src="https://www.unikbrushes.com/img/portfolio/2727.jpg" class="card-img-top img-fluid"
+                  alt="1stimage"></a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4 p-lg-4 my-3 my-lg-0" data-aos="zoom-in">
+          <div class="card">
+            <div class="zoom">
+              <a target="_blank" href="https://www.unikbrushes.com/img/portfolio/29.jpg"><img
+                  src="https://www.unikbrushes.com/img/portfolio/2929.jpg" class="card-img-top img-fluid"
+                  alt="1stimage"></a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4 p-lg-4 my-3 my-lg-0" data-aos="zoom-in">
+          <div class="card">
+            <div class="zoom">
+              <a target="_blank" href="https://www.unikbrushes.com/img/portfolio/1.jpg"><img
+                  src="https://www.unikbrushes.com/img/portfolio/11.jpg" class="card-img-top img-fluid"
+                  alt="1stimage"></a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4 p-lg-4 my-3 my-lg-0" data-aos="zoom-in">
+          <div class="card">
+            <div class="zoom">
+              <a target="_blank" href="https://www.unikbrushes.com/img/portfolio/28.jpg"><img
+                  src="https://www.unikbrushes.com/img/portfolio/2828.jpg" class="card-img-top img-fluid"
+                  alt="1stimage"></a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4 p-lg-4 my-3 my-lg-0" data-aos="zoom-in">
+          <div class="card">
+            <div class="zoom">
+              <a target="_blank" href="https://www.unikbrushes.com/img/portfolio/4.jpg"><img
+                  src="https://www.unikbrushes.com/img/portfolio/44.jpg" class="card-img-top img-fluid"
+                  alt="1stimage"></a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4 p-lg-4 my-3 my-lg-0" data-aos="zoom-in">
+          <div class="card">
+            <div class="zoom">
+              <a target="_blank" href="https://www.unikbrushes.com/img/portfolio/5.jpg"><img
+                  src="https://www.unikbrushes.com/img/portfolio/55.jpg" class="card-img-top img-fluid"
+                  alt="1stimage"></a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4 p-lg-4 my-3 my-lg-0" data-aos="zoom-in">
+          <div class="card">
+            <div class="zoom">
+              <a target="_blank" href="https://www.unikbrushes.com/img/portfolio/6.jpg"><img
+                  src="https://www.unikbrushes.com/img/portfolio/66.jpg" class="card-img-top img-fluid"
+                  alt="1stimage"></a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4 p-lg-4 my-3 my-lg-0" data-aos="zoom-in">
+          <div class="card">
+            <div class="zoom">
+              <a target="_blank" href="https://www.unikbrushes.com/img/portfolio/8.jpg"><img
+                  src="https://www.unikbrushes.com/img/portfolio/88.jpg" class="card-img-top img-fluid"
+                  alt="1stimage"></a>
+            </div>
+          </div>
+        </div>
+        <br>
+        <center><a href="/portfolio.php" class="port-show-btn">Show more</a></center>
+
+        <style>
+          .port-show-btn {
+            color: black;
+            background: #ffc500;
+            border: 2px solid #ffc500;
+            padding: 0.5em 1em;
+            border-radius: 7px;
+            font-size: 1.2em;
+            text-decoration: none;
+            transition: 0.4s;
+          }
+
+          .port-show-btn:hover {
+            color: black;
+            background: #fff;
+          }
+        </style>
+
+        <h1 class="mt-5">My skills</h1>
+        <center>
+          <hr align="center" width="50%" style="color: black;" size=5px>
+        </center>
+        <div class="col-md-2 mt-3" data-aos="fade-right">
+          <img class="img-fluid" width="75%" src=https://www.unikbrushes.com/img/html.png>
+        </div>
+
+        <div class="col-md-2 mt-3" data-aos="fade-right">
+          <img class="img-fluid" width="75%" src=https://www.unikbrushes.com/img/css.png>
+        </div>
+
+        <div class="col-md-2 mt-3" data-aos="fade-right">
+          <img class="img-fluid" width="75%" src=https://www.unikbrushes.com/img/javascript.png>
+        </div>
+
+        <div class="col-md-2 mt-3" data-aos="fade-right">
+          <img class="img-fluid" width="75%" src=https://www.unikbrushes.com/img/boot.png>
+        </div>
+
+        <div class="col-md-2 mt-3" data-aos="fade-right">
+          <img class="img-fluid" width="75%" src=https://www.unikbrushes.com/img/jquery.png>
+        </div>
+
+        <div class="col-md-2 mt-3" data-aos="fade-right">
+          <img class="img-fluid" width="75%" src=https://www.unikbrushes.com/img/react.png>
+        </div>
 
       </div>
     </div>
+  </div>
 
-    <button
-        type="button"
-        class="btn bg-orange btn-floating btn-lg"
-        id="btn-back-to-top"
-        >
- <i class="fas fa-arrow-up"></i>
-</button>
 
-    <!-- Bootstrap JavaScript Libraries -->
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
 
-    <!--Custom scripts-->
-    <script src="script.js"> </script>
-    <script src="contact.js"> </script>
-    
-    <!--Animate on scroll-->
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script>
-  AOS.init({
-       offset: 100,
-       duration: 1000,
-  });
-</script>   
+  <div class="container-fluid contact bg-black text-white" id="contact">
+    <div class="container">
+      <h1 class="text-center">Want to get a quote for your designs?</h1>
+      <h3 class="text-center">Feel free to contact me by clicking the button below
+        and send me an email regarding your order.</h3><br>
 
-  </body>
+      <center>
+        <a class="getaquote text-uppercase" data-bs-toggle="modal" data-bs-target="#getaquote">
+          get a quote
+        </a>
+      </center>
+
+      <!-- Modal -->
+      <div class="modal fade" id="getaquote" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content">
+            <div class="modal-header bg-black">
+              <h5 class="modal-title text-white" id="exampleModalLabel">Get a Quote</h5>
+              <button type="button" class="btn-close bg-white" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body text-primary-color">
+
+              <p class="text-center"><strong><i class="bi bi-envelope-fill"></i> Email:</strong> <a
+                  href="mailto:support@unikbrushes.com">support@unikbrushes.com</a></p>
+            </div>
+            <div class="modal-footer bg-black p-1">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container-fluid top-nav bg-orange">
+    <div class="container p-2">
+
+      <div class="row">
+
+        <div class="col-md-8 m-0 extrass text-center text-md-start">
+          <p class="py-2"><i class="fa-solid fa-envelope"></i> <a
+              href="mailto:support@unikbrushes.com">support@unikbrushes.com</a> &nbsp; <i class="fa-solid fa-phone"></i>
+            <a href="tel:+918762618517">+91 8762-618517</a>
+          </p>
+        </div>
+
+        <div class="col-md-4 m-0 text-center text-md-end">
+          <p>
+            <a href="https://wa.me/918762618517" target="_blank"><i class="fa-brands fa-whatsapp fa-2x"></i></a> &nbsp;
+            <a href="https://instagram.com/unikbrushes" target="_blank"><i class="fa-brands fa-instagram fa-2x"></i></a>
+            &nbsp;
+            <a href="https://facebook.com/unikbrushes" target="_blank"><i class="fa-brands fa-facebook fa-2x"></i></a>
+            &nbsp;
+            <a href="skype:live:bucksman5233?chat" target="_blank"><i class="fa-brands fa-skype fa-2x"></i></a>
+          </p>
+
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+
+
+  <div class="container-fluid bg-black footer" id="footer">
+    <div class="container">
+
+      <div class="row text-white text-center">
+
+        <div class="col-md-4 left-footer p-3" data-aos="fade-right">
+          <h4 class="text-blue">About me</h4>
+          <div class="me">
+            <img src="https://www.unikbrushes.com/img/me.jpg" class="img-fluid w-50 mb-3" style="border-radius: 50%;"
+              data-aos="zoom-in">
+          </div>
+          <p>I'm Amar, a Front-end web developer having 6+ years of experience into designing websites using HTML, CSS,
+            JavaScript, Bootstrap, jQuery.<a target="_blank" href="https://www.learnmall.in/cert/FDE448338B"> Click here
+              to view my certification.</a></p>
+          <p><a target="_blank" href="https://www.instagram.com/unikbrushes/"><i
+                class="fa-brands fa-instagram fa-2x me-1"></i></a> <a target="_blank"
+              href="skype:live:bucksman5233?chat"><i class="fa-brands fa-skype fa-2x me-1"></i></a> <a target="_blank"
+              href="https://www.facebook.com/unikbrushes"><i class="fa-brands fa-facebook fa-2x me-1"></i></a> <a
+              target="_blank" href="https://www.linkedin.com/in/amar-karthik"><i
+                class="fa-brands fa-linkedin fa-2x me-1"></i></a></p>
+        </div>
+
+        <div class="col-md-2 center-footer">
+
+        </div>
+
+        <div class="col-md-6 right-footer p-3" data-aos="fade-right">
+          <h4 class="text-blue">Refund Policy</h4>
+          <p>We don't offer refunds to clients when all of our work is completed. But we will show mockups before the
+            final order delivery and If the client is not satisfied with that design, then we will offer the refund
+            according to the completion of order.</p>
+
+          <h4 class="text-blue mt-4">Payment Processors</h4>
+          <p>I accept payments from PayPal(with fees), Payeer, PerfectMoney, Bitcoin, Ethereum, Litecoin, Dogecoin, Bank
+            Transfer(Only for Indians) and UPI payments(Only for Indians).</p>
+        </div>
+
+      </div>
+
+      <center>
+        <hr align="center" style="color: white;" size=5px>
+      </center>
+
+      <p class="text-center">Copyright Â© 2016 - 2022 <a href="https://www.unikbrushes.com">Unikbrushes.com</a> All
+        rights reserved.</p>
+
+    </div>
+  </div>
+
+  <button type="button" class="btn bg-orange btn-floating btn-lg" id="btn-back-to-top">
+    <i class="fas fa-arrow-up"></i>
+  </button>
+
+  <!-- Bootstrap JavaScript Libraries -->
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+    integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
+    integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
+    crossorigin="anonymous"></script>
+
+  <!--Custom scripts-->
+  <script src="script.js"> </script>
+  <script src="contact.js"> </script>
+
+  <!--Animate on scroll-->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      offset: 55,
+      duration: 1000,
+    });
+  </script>
+
+</body>
+
 </html>
